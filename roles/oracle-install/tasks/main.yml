@@ -22,7 +22,7 @@
 
 # ==> execute installation
 - name: Install Product
-  command: '{{ installation_folder}}/database/runInstaller -silent -ignorePrereq -ignoreSysPrereqs -waitforcompletion -responseFile {{ installation_folder }}/db_install.rsp'
+  command: '{{ installation_folder}}/database/runInstaller -silent -ignorePrereq -ignoreSysPrereqs -waitforcompletion -responseFile {{ installation_folder }}/db_install.rsp DECLINE_SECURITY_UPDATES=TRUE'
 
 # ==> execute Inventory command as root
 - name: Execute Inventoty root command
